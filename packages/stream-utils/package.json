@@ -52,7 +52,7 @@
     "test:types": "tsc --noEmit",
     "test": "run -p lint test:unit test:types"
   },
-  "dependencies": {
+  "devDependencies": {
     "@types/node": "^22.0.0"
   }
 }

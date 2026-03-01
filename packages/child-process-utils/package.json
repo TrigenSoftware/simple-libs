@@ -54,7 +54,9 @@
     "test": "run -p lint test:unit test:types"
   },
   "dependencies": {
-    "@simple-libs/stream-utils": "workspace:^",
+    "@simple-libs/stream-utils": "workspace:^"
+  },
+  "devDependencies": {
     "@types/node": "^22.0.0"
   }
 }

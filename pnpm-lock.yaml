@@ -65,6 +65,7 @@ importers:
       '@simple-libs/stream-utils':
         specifier: workspace:^
         version: link:../stream-utils
+    devDependencies:
       '@types/node':
         specifier: ^22.0.0
         version: 22.19.13
@@ -74,7 +75,7 @@ importers:
     publishDirectory: package
 
   packages/stream-utils:
-    dependencies:
+    devDependencies:
       '@types/node':
         specifier: ^22.0.0
         version: 22.19.13
