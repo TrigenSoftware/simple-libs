@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/TrigenSoftware/simple-libs/compare/child-process-utils@1.0.1...child-process-utils@1.0.2) (2026-03-01)
+
+### Bug Fixes
+
+* move `@types/node` to devDependencies ([1775a7f](https://github.com/TrigenSoftware/simple-libs/commit/1775a7f7fbc1c431ba6922b6cdfae4cfded07c20)), closes [#14](https://github.com/TrigenSoftware/simple-libs/issues/14)
+
 ## [1.0.1](https://github.com/TrigenSoftware/simple-libs/compare/child-process-utils@1.0.0...child-process-utils@1.0.1) (2025-06-14)
 
 ### Bug Fixes
