@@ -94,7 +94,10 @@ export function mergeReadables<
  * @param separator
  * @yields String chunks.
  */
-export async function* splitStream(stream: AsyncIterable<string | Buffer>, separator: string) {
+export async function* splitStream(
+  stream: AsyncIterable<string | Buffer>,
+  separator: string
+) {
   let chunk: string | Buffer
   let payload: string[]
   let buffer = ''
@@ -112,5 +115,38 @@ export async function* splitStream(stream: AsyncIterable<string | Buffer>, separ
 
   if (buffer) {
     yield buffer
+  }
+}
+
+/**
+ * Parse JSON objects from a stream, separated by a delimiter (default is newline).
+ * @param stream
+ * @param delimiter
+ * @yields Parsed JSON objects of type T.
+ */
+export async function* parseJsonStream<T>(
+  stream: AsyncIterable<string | Buffer>,
+  delimiter = /\r?\n/
+) {
+  let chunk: string | Buffer
+  let payload: string[]
+  let buffer = ''
+  let json: string
+
+  for await (chunk of stream) {
+    buffer += chunk.toString()
+
+    if (delimiter.test(buffer)) {
+      payload = buffer.split(delimiter)
+      buffer = payload.pop() || ''
+
+      for (json of payload) {
+        yield JSON.parse(json) as T
+      }
+    }
+  }
+
+  if (buffer) {
+    yield JSON.parse(buffer) as T
   }
 }

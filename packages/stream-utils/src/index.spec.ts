@@ -9,7 +9,8 @@ import {
   toArray,
   mergeReadables,
   splitStream,
-  firstFromStream
+  firstFromStream,
+  parseJsonStream
 } from './index.js'
 
 function stream(id: string, time: number) {
@@ -71,6 +72,26 @@ describe('stream-utils', () => {
       const result = await firstFromStream(stream)
 
       expect(result).toEqual(null)
+    })
+  })
+
+  describe('parseJsonStream', () => {
+    it('should parse stream of json objects', async () => {
+      const stream = Readable.from([
+        '[1]\n[2]\n',
+        '[3]\n',
+        '[4]\n[5]\n[6]'
+      ])
+      const result = await toArray(parseJsonStream(stream))
+
+      expect(result).toEqual([
+        [1],
+        [2],
+        [3],
+        [4],
+        [5],
+        [6]
+      ])
     })
   })
 })
