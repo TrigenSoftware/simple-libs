@@ -65,9 +65,7 @@ export function mergeReadables<
 ): Readable & AsyncIterable<MergedReadableChunk<K, T>> {
   const mergedStream = new Readable({
     objectMode: true,
-    read() {
-      /* no-op */
-    }
+    read() { /* no-op */ }
   })
   let ended = 0
 
