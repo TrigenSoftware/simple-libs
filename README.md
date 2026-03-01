@@ -25,7 +25,7 @@ A set of packages with simple utilities.
 [hosted-git-info-npm-url]: https://www.npmjs.com/package/@simple-libs/hosted-git-info
 
 [hosted-git-info-deps]: https://img.shields.io/librariesio/release/npm/@simple-libs/hosted-git-info
-[hosted-git-info-deps-url]: https://libraries.io/npm/@simple-libs%2Fhosted-git-info/tree
+[hosted-git-info-deps-url]: https://libraries.io/npm/@simple-libs%2Fhosted-git-info
 
 <!-- stream-utils -->
 
@@ -33,7 +33,7 @@ A set of packages with simple utilities.
 [stream-utils-npm-url]: https://www.npmjs.com/package/@simple-libs/stream-utils
 
 [stream-utils-deps]: https://img.shields.io/librariesio/release/npm/@simple-libs/stream-utils
-[stream-utils-deps-url]: https://libraries.io/npm/@simple-libs%2Fstream-utils/tree
+[stream-utils-deps-url]: https://libraries.io/npm/@simple-libs%2Fstream-utils
 
 <!-- child-process-utils -->
 
@@ -41,4 +41,4 @@ A set of packages with simple utilities.
 [child-process-utils-npm-url]: https://www.npmjs.com/package/@simple-libs/child-process-utils
 
 [child-process-utils-deps]: https://img.shields.io/librariesio/release/npm/@simple-libs/child-process-utils
-[child-process-utils-deps-url]: https://libraries.io/npm/@simple-libs%2Fchild-process-utils/tree
+[child-process-utils-deps-url]: https://libraries.io/npm/@simple-libs%2Fchild-process-utils
