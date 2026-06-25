@@ -1,0 +1,60 @@
+{
+  "name": "@simple-libs/normalize-package-data",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A small library to normalize package data.",
+  "author": {
+    "name": "Dan Onoshko",
+    "email": "danon0404@gmail.com",
+    "url": "https://github.com/dangreen"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/TrigenSoftware/simple-libs/tree/main/packages/normalize-package-data#readme",
+  "funding": "https://ko-fi.com/dangreen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TrigenSoftware/simple-libs.git",
+    "directory": "packages/normalize-package-data"
+  },
+  "bugs": {
+    "url": "https://github.com/TrigenSoftware/simple-libs/issues"
+  },
+  "keywords": [
+    "package",
+    "normalize"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": "./src/index.ts",
+  "publishConfig": {
+    "exports": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "directory": "package",
+    "linkDirectory": false
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clear:package": "del ./package",
+    "clear:dist": "del ./dist",
+    "clear": "del ./package ./dist ./coverage",
+    "prepublishOnly": "run build clear:package clean-publish",
+    "postpublish": "pnpm clear:package",
+    "build": "tsgo -p tsconfig.build.json",
+    "lint": "oxlint",
+    "test:unit": "vitest run --coverage",
+    "test:types": "tsgo --noEmit",
+    "test": "run -p lint test:unit test:types"
+  },
+  "dependencies": {
+    "@simple-libs/hosted-git-info": "workspace:^",
+    "semver": "^7.8.5"
+  },
+  "devDependencies": {
+    "@types/semver": "^7.7.1"
+  }
+}
