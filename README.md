@@ -18,6 +18,7 @@ A set of packages with simple utilities.
 | [`@simple-libs/hosted-git-info`](packages/hosted-git-info#readme) | A small library to parse hosted git info. | [![NPM version][hosted-git-info-npm]][hosted-git-info-npm-url] | [![Dependencies status][hosted-git-info-deps]][hosted-git-info-deps-url] |
 | [`@simple-libs/stream-utils`](packages/stream-utils#readme) | A small set of utilities for streams. | [![NPM version][stream-utils-npm]][stream-utils-npm-url] | [![Dependencies status][stream-utils-deps]][stream-utils-deps-url] |
 | [`@simple-libs/child-process-utils`](packages/child-process-utils#readme) | A small set of utilities for child process. | [![NPM version][child-process-utils-npm]][child-process-utils-npm-url] | [![Dependencies status][child-process-utils-deps]][child-process-utils-deps-url] |
+| [`@simple-libs/normalize-package-data`](packages/normalize-package-data#readme) | A small library to normalize package data. | [![NPM version][normalize-package-data-npm]][normalize-package-data-npm-url] | [![Dependencies status][normalize-package-data-deps]][normalize-package-data-deps-url] |
 
 <!-- hosted-git-info -->
 
@@ -42,3 +43,11 @@ A set of packages with simple utilities.
 
 [child-process-utils-deps]: https://img.shields.io/librariesio/release/npm/@simple-libs/child-process-utils
 [child-process-utils-deps-url]: https://libraries.io/npm/@simple-libs%2Fchild-process-utils
+
+<!-- normalize-package-data -->
+
+[normalize-package-data-npm]: https://img.shields.io/npm/v/@simple-libs/normalize-package-data.svg
+[normalize-package-data-npm-url]: https://www.npmjs.com/package/@simple-libs/normalize-package-data
+
+[normalize-package-data-deps]: https://img.shields.io/librariesio/release/npm/@simple-libs/normalize-package-data
+[normalize-package-data-deps-url]: https://libraries.io/npm/@simple-libs%2Fnormalize-package-data
