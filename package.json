@@ -37,7 +37,7 @@
     "@trigen/scripts": "^9.0.0",
     "@typescript/native-preview": "latest",
     "@vitest/coverage-v8": "^4.1.9",
-    "clean-publish": "5.2.2",
+    "clean-publish": "7.1.0",
     "commitizen": "^4.3.1",
     "del-cli": "^7.0.0",
     "nano-staged": "^1.0.0",
