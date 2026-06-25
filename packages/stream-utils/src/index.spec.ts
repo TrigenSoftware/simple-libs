@@ -14,7 +14,7 @@ import {
 } from './index.js'
 
 function stream(id: string, time: number) {
-  // eslint-disable-next-line no-template-curly-in-string, prefer-template
+  // oxlint-disable-next-line prefer-template no-template-curly-in-string
   const child = spawn('node', ['-e', '(async () => { for (let i = 0; i < 10; i++) { await new Promise(r => setTimeout(r, ' + time + ')); console.log(`' + id + '${i}`) }})()'])
 
   return child.stdout

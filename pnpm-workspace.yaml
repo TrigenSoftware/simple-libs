@@ -1,8 +1,6 @@
 packages:
   - packages/*
 autoInstallPeers: false
-publicHoistPattern:
-  - '*eslint-plugin*'
 allowBuilds:
   esbuild: true
   simple-git-hooks: true
