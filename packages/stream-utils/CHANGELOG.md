@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/TrigenSoftware/simple-libs/compare/stream-utils@1.2.0...stream-utils@2.0.0) (2026-06-25)
+
+### ⚠ BREAKING CHANGES
+
+* Node.js 22 is now the minimum supported version.
+
+### Features
+
+* require Node.js 22 ([37f99c5](https://github.com/TrigenSoftware/simple-libs/commit/37f99c5189547d943d3be8b96ccd08a797896107))
+
 ## [1.2.0](https://github.com/TrigenSoftware/simple-libs/compare/stream-utils@1.1.0...stream-utils@1.2.0) (2026-03-01)
 
 ### Features
