@@ -27,8 +27,8 @@ importers:
         specifier: ^9.2.3
         version: 9.2.3(oxlint-tsgolint@0.23.0)(oxlint@1.71.0(oxlint-tsgolint@0.23.0))
       '@trigen/scripts':
-        specifier: ^8.0.4
-        version: 8.0.4
+        specifier: ^9.0.0
+        version: 9.0.0
       '@typescript/native-preview':
         specifier: latest
         version: 7.0.0-dev.20260624.1
@@ -573,10 +573,6 @@ packages:
     resolution: {integrity: sha512-3nWd8irxvDI6v856wpPCHZ+08iQR0oHTZfzAZmnbsLzf+Sf1odraP6uKOHDZToXq3RPRV/LbqGVlSCogm9cJjg==}
     engines: {node: '>=18'}
 
-  '@simple-libs/stream-utils@1.1.0':
-    resolution: {integrity: sha512-6rsHTjodIn/t90lv5snQjRPVtOosM7Vp0AKdrObymq45ojlgVwnpAqdc+0OBBrpEiy31zZ6/TKeIVqV1HwvnuQ==}
-    engines: {node: '>=18'}
-
   '@simple-libs/stream-utils@1.2.0':
     resolution: {integrity: sha512-KxXvfapcixpz6rVEB6HPjOUZT22yN6v0vI0urQSk1L8MlEWPDFCZkhw2xmkyoTGYeFw7tWTZd7e3lVzRZRN/EA==}
     engines: {node: '>=18'}
@@ -608,9 +604,9 @@ packages:
     resolution: {integrity: sha512-oatwPW3/TiswgA03jE8bweFU3Z8c0zswuvjLMJOWM/xWD6cD7xMiHUJf06lkq1JfpSRdz+jTjaX6qSVbD2ICKw==}
     engines: {node: '>=22'}
 
-  '@trigen/scripts@8.0.4':
-    resolution: {integrity: sha512-RU1jFuThG4luoufHOg3J8G7NfP8PfLEE4shlzirEgsADPHo7WH4iluD6Q0OaDtMLSDCF6VfqyzvGk5FIkqpsJw==}
-    engines: {node: '>=20'}
+  '@trigen/scripts@9.0.0':
+    resolution: {integrity: sha512-smerLGo2mzrvAZka5gwMa1c5m9zKJnt0qXxUOA3d6iOVdUuBD7fxRQhVWHyoNSFehuALLDwtNlnKACfCL6Fdrg==}
+    engines: {node: '>=22'}
     hasBin: true
 
   '@tybys/wasm-util@0.10.3':
@@ -1582,9 +1578,9 @@ packages:
       vite-plus:
         optional: true
 
-  p-limit@6.2.0:
-    resolution: {integrity: sha512-kuUqqHNUqoIWp/c467RI4X6mmyuojY5jGutNU0wVTmEOOfcuwLqyMVoAi9MKi2Ak+5i9+nhmrK4ufZE8069kHA==}
-    engines: {node: '>=18'}
+  p-limit@7.3.0:
+    resolution: {integrity: sha512-7cIXg/Z0M5WZRblrsOla88S4wAK+zOQQWeBYfV3qJuJXMr+LnbYjaadrFaS0JILfEDPVqHyKnZ1Z/1d6J9VVUw==}
+    engines: {node: '>=20'}
 
   p-map@7.0.3:
     resolution: {integrity: sha512-VkndIv2fIB99swvQoA65bm+fsmt6UNdGeIB0oxBs+WhAhdh08QA04JXpI7rbB9r08/nkbysKoya9rtDERYOYMA==}
@@ -2415,11 +2411,7 @@ snapshots:
 
   '@simple-libs/child-process-utils@1.0.1':
     dependencies:
-      '@simple-libs/stream-utils': 1.1.0
-      '@types/node': 22.19.13
-
-  '@simple-libs/stream-utils@1.1.0':
-    dependencies:
+      '@simple-libs/stream-utils': 1.2.0
       '@types/node': 22.19.13
 
   '@simple-libs/stream-utils@1.2.0': {}
@@ -2448,12 +2440,12 @@ snapshots:
 
   '@trigen/oxlint@9.1.0': {}
 
-  '@trigen/scripts@8.0.4':
+  '@trigen/scripts@9.0.0':
     dependencies:
       '@simple-libs/child-process-utils': 1.0.1
-      '@simple-libs/stream-utils': 1.1.0
+      '@simple-libs/stream-utils': 1.2.0
       argue-cli: 2.1.0
-      p-limit: 6.2.0
+      p-limit: 7.3.0
 
   '@tybys/wasm-util@0.10.3':
     dependencies:
@@ -3366,7 +3358,7 @@ snapshots:
       '@oxlint/binding-win32-x64-msvc': 1.71.0
       oxlint-tsgolint: 0.23.0
 
-  p-limit@6.2.0:
+  p-limit@7.3.0:
     dependencies:
       yocto-queue: 1.2.2
 
