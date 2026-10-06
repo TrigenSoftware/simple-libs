@@ -4,3 +4,4 @@ autoInstallPeers: false
 allowBuilds:
   esbuild: true
   simple-git-hooks: true
+workspaceConcurrency: 0
