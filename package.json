@@ -36,7 +36,7 @@
     "@trigen/oxlint-config": "^9.2.3",
     "@trigen/scripts": "^9.0.0",
     "@typescript/native-preview": "latest",
-    "@vitest/coverage-v8": "^4.1.9",
+    "@vitest/coverage-v8": "^5.0.0",
     "clean-publish": "5.2.2",
     "commitizen": "^4.3.1",
     "del-cli": "^7.0.0",
