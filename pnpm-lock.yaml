@@ -78,9 +78,11 @@ importers:
       '@types/node':
         specifier: ^22.0.0
         version: 22.19.13
+    linkDirectory: false
     publishDirectory: package
 
   packages/hosted-git-info:
+    linkDirectory: false
     publishDirectory: package
 
   packages/normalize-package-data:
@@ -95,6 +97,7 @@ importers:
       '@types/semver':
         specifier: ^7.7.1
         version: 7.7.1
+    linkDirectory: false
     publishDirectory: package
 
   packages/stream-utils:
@@ -102,6 +105,7 @@ importers:
       '@types/node':
         specifier: ^22.0.0
         version: 22.19.13
+    linkDirectory: false
     publishDirectory: package
 
 packages:
