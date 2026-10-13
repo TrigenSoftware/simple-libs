@@ -57,6 +57,6 @@
     "@simple-libs/stream-utils": "workspace:^"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0"
+    "@types/node": "^24.0.0"
   }
 }
