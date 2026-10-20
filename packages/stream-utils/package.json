@@ -53,6 +53,6 @@
     "test": "run -p lint test:unit test:types"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0"
+    "@types/node": "^24.0.0"
   }
 }
