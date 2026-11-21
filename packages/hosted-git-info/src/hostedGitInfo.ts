@@ -69,9 +69,9 @@ function getRepositoryUrl(
  */
 export function parseHostedGitUrl(input: string): HostedGitInfo | null {
   // github edge case with branch in the url
-  let matches = input.match(/^(?:https:\/\/)?github\.com\/([^/]+)\/([^/.#]+)(?:\/tree\/[^/]+)?$/)
+  let matches = input.match(/^(?:https:\/\/)?github\.com\/([^/]+)\/([^/#]+)(?:\/tree\/[^/]+)?$/)
 
-  if (matches) {
+  if (matches && !matches[2].endsWith('.git')) {
     return {
       url: input,
       type: 'github',
@@ -87,13 +87,13 @@ export function parseHostedGitUrl(input: string): HostedGitInfo | null {
   let project
 
   // git+ssh and ssh urls
-  matches = input.match(/^(?:(?:git\+)?ssh:\/\/(?:[^@]+@)?|[^@]+@)(?:www\.)?([^@:]+):([^/]+(?:\/[^/]+)?)\/([^/.#]+)(?:\.git)?(?:#(.+))?/)
+  matches = input.match(/^(?:(?:git\+)?ssh:\/\/(?:[^@]+@)?|[^@]+@)(?:www\.)?([^@:]+):([^/#]+(?:\/[^/#]+)?)\/([^/#]+)(?:#(.+))?/)
 
   if (matches) {
     type = getType(matches[1])
     host = `https://${matches[1]}`
     owner = matches[2]
-    project = matches[3]
+    project = matches[3].replace(/\.git$/, '')
 
     return {
       url: getRepositoryUrl(type, host, owner, project, matches[4]),
@@ -105,13 +105,13 @@ export function parseHostedGitUrl(input: string): HostedGitInfo | null {
   }
 
   // git+https and https urls
-  matches = input.match(/^(?:(?:git\+)?https|git):\/\/(?:[^@]+@)?(?:www\.)?([^@/]+)\/([^/]+(?:\/[^/]+)*)\/([^/.#]+)(?:\.git)?(?:#(.+))?$/)
+  matches = input.match(/^(?:(?:git\+)?https|git):\/\/(?:[^@]+@)?(?:www\.)?([^@/]+)\/([^/#]+(?:\/[^/#]+)*)\/([^/#]+)(?:#(.+))?$/)
 
   if (matches) {
     type = getType(matches[1])
     host = `http${type || input.includes('https://') ? 's' : ''}://${matches[1]}`
     owner = matches[2]
-    project = matches[3]
+    project = matches[3].replace(/\.git$/, '')
 
     return {
       url: getRepositoryUrl(type, host, owner, project, matches[4]),
@@ -123,13 +123,13 @@ export function parseHostedGitUrl(input: string): HostedGitInfo | null {
   }
 
   // shortcuts
-  matches = input.match(/^(?:([^@:]+):)?(?:[^@:]+@|[^@:]*:[^@:]+@)?([^/#]+(?:\/[^/]+)?)\/([^/.#]+)(?:\.git)?(?:#(.+))?/)
+  matches = input.match(/^(?:([^@:]+):)?(?:[^@:]+@|[^@:]*:[^@:]+@)?([^/#]+(?:\/[^/#]+)?)\/([^/#]+)(?:#(.+))?/)
 
   if (matches) {
     type = matches[1] as HostType || 'github'
     host = getHost(type)
     owner = matches[2]
-    project = matches[3]
+    project = matches[3].replace(/\.git$/, '')
 
     return {
       url: getRepositoryUrl(type, host, owner, project, matches[4]),
